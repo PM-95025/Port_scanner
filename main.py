@@ -13,7 +13,7 @@ host = input('host: ')
 socket.setdefaulttimeout(__timeout=float(input('timeout: ')))
 
 
-def port_scan(port: int):
+def port_scan(port: int) -> bool:
 	s: socket = socket.socket()
 	try:
 		s.connect((host, port))
@@ -25,8 +25,8 @@ def port_scan(port: int):
 		s.close()
 
 
-def scan(ports_: Iterable[int]):
-	for port in ports_:
+def scan(ports_: Iterable[int]) -> None:
+	for port in list(ports_):
 		if port_scan(port):
 			opened.add(port)
 			print(f"{GREEN}{host:15}:{port:5} is open    {RESET}")
@@ -34,7 +34,7 @@ def scan(ports_: Iterable[int]):
 
 
 with open('ports.txt') as f:
-	ports = [int(i) for i in f.readlines()]
+	ports: tuple[int] = tuple([int(i) for i in f.readlines()])
 	print(f'will bo checked {len(ports)} ports')
 
 scan(ports)
