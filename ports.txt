@@ -1,74 +1,75 @@
-1
-5
-7
-9
-11
-13
-15
-17
-18
-19
-20
-21
-22
-23
-25
-37
-39
-42
-43
-49
-50
-53
-63
-67
-68
-69
-70
-71
-72
-73
-79
-80
-88
-94
-95
-98
-101
-102
+1 service TCPMUX (TCP Port Service Multiplexer)
+5 transfer RJE (Remote Job Entry)
+7 testing ECHO
+9 testing DISCARD, Wake-on-LAN
+11 information SYSTAT (list of active users)
+13 time DAYTIME
+15 information NETSTAT (outdated)
+17 unknown QOTD (Quote of the Day)
+18 transfer MSP (Message Send Protocol)
+19 unknown CHARGEN (Character Generator)
+20 transfer FTP DATA
+21 transfer FTP management
+22 transfer SSH, SFTP, SCP
+23 transfer Telnet
+25 transfer SMTP
+37 time Time (outdated)
+39 RLP (Resource Location Protocol)
+42 information WINS (Windows Internet Name Service), nameserver
+43 information_testing WHOIS
+49 unknown TACACS Login Host Protocol
+50 transfer RE-MAIL-CK (Remote Mail Checking Protocol)
+53 service DOMAIN (DNS)
+63 information_testing WHOISPP (WHOIS++)
+67 service BBOOTPS (Bootstrap Protocol Server)
+68 service BOOTPC (Bootstrap Protocol Client)
+69 transfer TFTP (Trivial File Transfer Protocol)
+70 unknown Gopher
+71 unknown NETRJS-1 (Remote job entry Service 1)
+72 unknown NETRJS-2 (Remote job entry Service 2)
+73 unknown NETRJS-3 (Remote job entry Service 3)
+74 unknown NETRJS-4 (Remote job entry Service 4)
+79 unknown Finger
+80 web HTTP (HyperText Transfer Protocol)
+88 unknown Kerberos authentication system
+94 unknown OBJCALL (Tivoli Object Dispatcher)
+95 unknown SUPDUP
+98 unknown TACNEWS, LINUXCONF
+101 unknown HOSTNAME (NIC Host Name Server)
+102 unknown ISO-TSAP (Transport Service Access Point Class 0)
 105
-106
-107
-109
-110
-111
-113
-115
-117
-119
-123
-137
-138
-139
-143
-161
-162
-163
-164
-174
-177
-178
-179
-191
-192
-194
-199
-201
-202
-204
-206
-209
-210
+106 service macOS Password Server
+107 unknown RTELNET (Remote Telnet Service)
+109 transfer POP2 (Post Office Protocol Version 2)
+110 transfer POP3, APOP
+111 unknown SUNRPC (Sun Remote Procedure Call)
+113 unknown Identification protocol
+115 transfer SFTP (Simple File Transfer Protocol)
+117 unknown UUCP-PATH (UUCP Path Service)
+119 transfer NNTP (Network News Transfer Protocol)
+123 time NTP (Network Time Protocol)
+137 unknown NETBIOS-NS (NetBIOS Name Service)
+138 unknown NETBIOS-DGM (NetBIOS Datagram Service)
+139 unknown NETBIOS-SSN (NetBIOS Session Service)
+143 transfer IMAP (Internet Message Access Protocol)
+161 unknown SNMP (Simple Network Management Protocol)
+162 unknown SNMPTRAP (Simple Network Management Protocol Trap)
+163 unknown CMIP-MAN (CMIP/TCP Manager)
+164 unknown MIP-AGENT (CMIP/TCP Agent)
+174 transfer MAILQ
+177 unknown XDMCP (X Display Manager Control Protocol)
+178 unknown NEXTSTEP (NextStep Window Server)
+179 unknown BGP (Border Gateway Protocol)
+191 unknown PROSPERO (Prospero Directory Service)
+192 unknown OSU-NMS (OSU Network Monitoring System)
+194 unknown IRC (Internet Relay Chat)
+199 unknown SMUX (SNMP Unix Multiplexer)
+201 unknown AT-RTMP (AppleTalk Routing Maintenance)
+202 unknown AT-NBP (AppleTalk Name Binding)
+204 unknown AT-ECHO (AppleTalk Echo)
+206 unknown AT-ZIS (AppleTalk Zone Information)
+209 transfer QMTP (Quick Mail Transfer Protocol)
+210 unknown Z39-50 (ANSI Z39.50)
 213
 220
 245

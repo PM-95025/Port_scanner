@@ -9,12 +9,11 @@ GREEN: Final[str] = Fore.GREEN
 RESET: Final[str] = Fore.RESET
 
 
-def scan(host, ports_: Iterable[int]) -> set[int]:
-	opened: set[int] = set()
+def scan(host, ports_: Iterable[int]) -> list[int]:
+	opened: list[int] = []
 
 	for port in tqdm(ports_):
 		connected: bool = port_scan(host, port)
 		if connected:
-			opened.add(port)
-			print(f"{GREEN}{host:15}:{port:5} is open    {RESET}")
+			opened.append(port)
 	return opened

@@ -13,9 +13,16 @@ host: Final[str] = input('host: ')
 socket.setdefaulttimeout(float(input('timeout: ')))
 
 with open('ports.txt') as f:
-	ports: Final[tuple[int]] = tuple([int(i) for i in f.readlines()])
-	print(f'will be checked {len(ports)} ports')
+	lines = f.readlines()
 
-opened: set[int] = scan(host, ports)
+ports: Final[tuple[int]] = tuple([int(i.split()[0]) for i in lines])
+types: Final[tuple[str]] = tuple([i.split()[1] if len(i.split()) > 1 else '' for i in lines])
+info: Final[tuple[str]] = tuple([' '.join(i.split()[2:]) for i in lines])
 
-print(', '.join([str(i) for i in list(opened)]))
+print(f'will be checked {len(ports)} ports')
+
+opened: list[int] = scan(host, ports)
+
+for port in sorted(opened):
+	i = ports.index(port)
+	print(f"{GREEN}{host:15}:{port:5} is open{RESET} - {types[i]:10} - {info[i] if info[i] else 'unknown'}")
